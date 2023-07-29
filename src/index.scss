@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.address {
+  background: url("./images/pattern-bg-desktop.png") no-repeat;
+  background-size: cover;
+}
+
+*:focus {
+  outline-style: hidden;
+  outline-color: #1998e256;
+  outline-offset: 2px;
+
+  shape-outside: margin-box;
+}
+
+.result {
+  width: 95%;
+}
+
+@media screen and (min-width: 340px) {
+  #map {
+    margin-top: -240px;
+  }
+  #ipaddress {
+    width: 300px;
+  }
+
+  .result {
+    margin-top: -80px;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  #map {
+    margin-top: -265px;
+  }
+  #ipaddress {
+    width: 300px;
+  }
+
+  .result {
+    margin-top: -80px;
+  }
+}

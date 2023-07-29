@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="./index.scss" />
+    <script type="module" src="./js/script.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>David Mvoula | IP Address Tracker</title>
+  </head>
+  <body
+    class="border-b-gray-300 text-white z-10 overflow-x-hidden relative flex flex-col justify-center items-center"
+  >
+    <section
+      class="p-2 address overflow-x-hidden h-64 flex flex-col items-center w-full"
+    >
+      <h1 class="text-center text-3xl p-4">IP Address Tracker</h1>
+      <form class="flex" method="post">
+        <input
+          type="text"
+          name="ipadrress"
+          id="ipaddress"
+          class="rounded-tl-xl rounded-bl-xl p-3 w-96 text-black"
+          placeholder="Search for any IP address or domain"
+        />
+        <button
+          type="submit"
+          class="bg-black rounded-tr-xl rounded-br-xl -ml-2 p-2 w-10 flex justify-center items-center"
+        >
+          <img src="./images/icon-arrow.svg" alt="ipaddress" />
+        </button>
+      </form>
+    </section>
+    <section
+      class="result overflow-x-hidden flex text-center items-center justify-center text-black flex-wrap"
+    >
+      <div
+        class="bg-white lg:divide-x-2 divide-opacity-20 divide-black lg:mt-12 w-1/2 rounded-2xl shadow-2xl flex flex-wrap p-4 justify-center items-center z-10"
+      >
+        <div class="rounded-l-xl p-2">
+          <h2 class="mb-4 text-xs">IP ADRESS</h2>
+          <p class="font-semibold ipAddress">his IP address</p>
+        </div>
+        <div class="p-2">
+          <h2 class="mb-4 text-xs">LOCATION</h2>
+          <p class="font-semibold location">his Location</p>
+        </div>
+        <div class="p-2">
+          <h2 class="mb-4 text-xs">TIMEZONE</h2>
+          <p class="font-semibold timezone">his timezone</p>
+        </div>
+        <div class="rounded-r-xl p-2">
+          <h2 class="mb-4 text-xs">ISP</h2>
+          <p class="font-semibold isp">his ISP</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="map" overflow-x-hidden class="w-full -z-10 h-screen"></div>
+  </body>
+</html>

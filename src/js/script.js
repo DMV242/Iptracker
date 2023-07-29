@@ -38,7 +38,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
     className: "info",
     style: {
       background: "linear-gradient(to right, #51cf66,#2b8a3e)",
-      width: "400px",
+      width: "fit-content",
     },
   }).showToast();
   const ip_address = document.querySelector("#ipaddress").value;

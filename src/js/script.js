@@ -32,7 +32,15 @@ const isp = document.querySelector(".isp");
 
 document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
-
+  Toastify({
+    text: "Recherche en cours ...",
+    duration: "1000",
+    className: "info",
+    style: {
+      background: "linear-gradient(to right, #51cf66,#2b8a3e)",
+      width: "400px",
+    },
+  }).showToast();
   const ip_address = document.querySelector("#ipaddress").value;
   console.log(ip_address);
   const param = ip_address.split(".").length === 4 ? "ipAddress" : "domain";

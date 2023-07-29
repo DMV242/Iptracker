@@ -33,7 +33,7 @@ const isp = document.querySelector(".isp");
 document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
   Toastify({
-    text: "Recherche en cours ...",
+    text: "Search in progress ...",
     duration: "1000",
     className: "info",
     style: {
